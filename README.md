@@ -1,6 +1,6 @@
-# Label Notifier
+# Label Print Notifier
 
-Label Notifier is a Rails application designed to help store staff by preventing missed label printing tasks. It analyzes past printing history and sends notifications at appropriate times, ensuring that labels are printed regularly and on time.
+Label Print Notifier is a Rails application designed to help store staff by preventing missed label printing tasks. It analyzes past printing history and sends notifications at appropriate times, ensuring that labels are printed regularly and on time.
 
 ## Features
 
@@ -31,8 +31,8 @@ Label Notifier is a Rails application designed to help store staff by preventing
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Naoyuk/label_notifier.git
-    cd label_notifier
+    git clone https://github.com/Naoyuk/label_print_notifier.git
+    cd label_print_notifier
     ```
 
 2. Install dependencies:
