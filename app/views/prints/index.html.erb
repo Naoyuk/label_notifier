@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Prints</h1>
+
+<div id="prints">
+  <% @prints.each do |print| %>
+    <%= render print %>
+    <p>
+      <%= link_to "Show this print", print %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New print", new_print_path %>
