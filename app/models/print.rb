@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Print < ApplicationRecord
   validates :print_on, presence: true
 

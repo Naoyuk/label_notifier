@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :print do
-    print_on { "2024-07-16" }
+    print_on { '2024-07-16' }
     copies { 1 }
     association :label
   end

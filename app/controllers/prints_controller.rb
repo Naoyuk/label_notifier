@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PrintsController < ApplicationController
-  before_action :set_print, only: %i[ show edit update destroy ]
+  before_action :set_print, only: %i[show edit update destroy]
 
   # GET /prints or /prints.json
   def index
@@ -7,8 +9,7 @@ class PrintsController < ApplicationController
   end
 
   # GET /prints/1 or /prints/1.json
-  def show
-  end
+  def show; end
 
   # GET /prints/new
   def new
@@ -16,8 +17,7 @@ class PrintsController < ApplicationController
   end
 
   # GET /prints/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /prints or /prints.json
   def create
@@ -25,7 +25,7 @@ class PrintsController < ApplicationController
 
     respond_to do |format|
       if @print.save
-        format.html { redirect_to print_url(@print), notice: "Print was successfully created." }
+        format.html { redirect_to print_url(@print), notice: 'Print was successfully created.' }
         format.json { render :show, status: :created, location: @print }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class PrintsController < ApplicationController
   def update
     respond_to do |format|
       if @print.update(print_params)
-        format.html { redirect_to print_url(@print), notice: "Print was successfully updated." }
+        format.html { redirect_to print_url(@print), notice: 'Print was successfully updated.' }
         format.json { render :show, status: :ok, location: @print }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +52,20 @@ class PrintsController < ApplicationController
     @print.destroy!
 
     respond_to do |format|
-      format.html { redirect_to prints_url, notice: "Print was successfully destroyed." }
+      format.html { redirect_to prints_url, notice: 'Print was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_print
-      @print = Print.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def print_params
-      params.require(:print).permit(:print_on, :copies, :label_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_print
+    @print = Print.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def print_params
+    params.require(:print).permit(:print_on, :copies, :label_id)
+  end
 end
